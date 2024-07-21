@@ -97,7 +97,10 @@ class Programm
             {
                 try
                 {
-                    Console.WriteLine(Calculator.Calculate(line));
+                    if (line.Length != 0)
+                    {
+                        Console.WriteLine(Calculator.Calculate(line));
+                    }
                 }
                 catch (Exception e)
                 {
