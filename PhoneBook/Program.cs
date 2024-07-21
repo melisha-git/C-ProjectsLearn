@@ -17,10 +17,11 @@ class PhoneBook
         {
             throw new Exception("Enter contact name again");
         }
-        if (!_contacts.ContainsKey(contact.name))
+        if (_contacts.ContainsKey(contact.name))
         {
-            _contacts.Add(contact.name, contact);
+            throw new Exception("Contact already exist");
         }
+        _contacts.Add(contact.name, contact);
     }
 
     public void Delete(in string name)
